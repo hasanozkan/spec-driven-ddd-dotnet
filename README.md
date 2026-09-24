@@ -4,7 +4,7 @@
 ![.NET](https://img.shields.io/badge/.NET-10-512BD4) ![license](https://img.shields.io/badge/license-MIT-green)
 
 The library-lending domain from
-[spec-driven-ddd-sample](https://github.com/hasanozkan/spec-driven-ddd-sample)
+[spec-driven-ddd-python](https://github.com/hasanozkan/spec-driven-ddd-python)
 (Python), implemented again in **C# / ASP.NET Core 10** from **the same
 specs** — byte for byte — and serving **the same HTTP contract**.
 
@@ -69,7 +69,7 @@ run also caught a real difference: error responses went out as
 
 ---
 
-Part of a set with [spec-driven-ddd-sample](https://github.com/hasanozkan/spec-driven-ddd-sample),
+Part of a set with [spec-driven-ddd-python](https://github.com/hasanozkan/spec-driven-ddd-python),
 [llm-tool-calling-assistant](https://github.com/hasanozkan/llm-tool-calling-assistant),
 [gitops-reference](https://github.com/hasanozkan/gitops-reference) and
 [ai-native-engineering](https://github.com/hasanozkan/ai-native-engineering).

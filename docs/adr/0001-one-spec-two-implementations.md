@@ -4,7 +4,7 @@
 
 ## Context
 The same lending domain is implemented in Python
-([spec-driven-ddd-sample](https://github.com/hasanozkan/spec-driven-ddd-sample))
+([spec-driven-ddd-python](https://github.com/hasanozkan/spec-driven-ddd-python))
 and here in C#. The specs claim to be the source of truth; two implementations
 are how that claim gets tested.
 

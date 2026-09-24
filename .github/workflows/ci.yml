@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: hasanozkan/spec-driven-ddd-sample
+          repository: hasanozkan/spec-driven-ddd-python
           path: python-impl
       - run: diff -r python-impl/specs specs && echo "specs identical to the Python implementation"
 
