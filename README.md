@@ -41,10 +41,19 @@ flowchart LR
 ## Run it
 
 ```sh
-make check        # format, strict build, 27 tests (rules, flows, architecture, gates)
+make check        # format, strict build, 32 tests (rules, flows, architecture, gates, telemetry)
 make run          # http://localhost:8000/openapi/v1.json
 make conformance  # in another shell: the Python implementation's smoke test against this API
 ```
+
+## Operability — the same telemetry contract
+
+Both implementations emit [`specs/telemetry.yaml`](specs/telemetry.yaml).
+Here ASP.NET Core's own `http.server.request.duration` covers OPS-R1, a
+`LibraryMetrics` subscriber on the event bus counts loans, late fees and
+refusals (OPS-R2, R3), and the OpenTelemetry Prometheus exporter serves
+`/metrics` outside the API contract (OPS-R4). `OperabilityTests` checks every
+metric and attribute in the YAML against a real scrape.
 
 ## Tested by breaking it
 
