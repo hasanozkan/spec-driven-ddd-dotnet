@@ -1,0 +1,450 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Library.Api | v1",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/catalog/books": {
+      "post": {
+        "tags": [
+          "catalog"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterBook"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/books/{isbn}/copies": {
+      "post": {
+        "tags": [
+          "catalog"
+        ],
+        "parameters": [
+          {
+            "name": "isbn",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CopyOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/catalog/search": {
+      "get": {
+        "tags": [
+          "catalog"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvailabilityOut"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lending/members": {
+      "post": {
+        "tags": [
+          "lending"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterMember"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lending/members/{memberId}": {
+      "get": {
+        "tags": [
+          "lending"
+        ],
+        "parameters": [
+          {
+            "name": "memberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lending/members/{memberId}/payments": {
+      "post": {
+        "tags": [
+          "lending"
+        ],
+        "parameters": [
+          {
+            "name": "memberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lending/loans": {
+      "post": {
+        "tags": [
+          "lending"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Borrow"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoanOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lending/loans/{loanId}/return": {
+      "post": {
+        "tags": [
+          "lending"
+        ],
+        "parameters": [
+          {
+            "name": "loanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoanOut"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AvailabilityOut": {
+        "required": [
+          "isbn",
+          "title",
+          "author",
+          "copies_total",
+          "copies_available"
+        ],
+        "type": "object",
+        "properties": {
+          "isbn": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "copies_total": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "copies_available": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "BookOut": {
+        "required": [
+          "isbn",
+          "title",
+          "author"
+        ],
+        "type": "object",
+        "properties": {
+          "isbn": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
+        }
+      },
+      "Borrow": {
+        "required": [
+          "member_id",
+          "copy_id"
+        ],
+        "type": "object",
+        "properties": {
+          "member_id": {
+            "type": "string"
+          },
+          "copy_id": {
+            "type": "string"
+          }
+        }
+      },
+      "CopyOut": {
+        "required": [
+          "copy_id",
+          "isbn"
+        ],
+        "type": "object",
+        "properties": {
+          "copy_id": {
+            "type": "string"
+          },
+          "isbn": {
+            "type": "string"
+          }
+        }
+      },
+      "LoanOut": {
+        "required": [
+          "loan_id",
+          "copy_id",
+          "member_id",
+          "borrowed_on",
+          "due_on",
+          "returned_on",
+          "late_fee_cents"
+        ],
+        "type": "object",
+        "properties": {
+          "loan_id": {
+            "type": "string"
+          },
+          "copy_id": {
+            "type": "string"
+          },
+          "member_id": {
+            "type": "string"
+          },
+          "borrowed_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "due_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "returned_on": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date"
+          },
+          "late_fee_cents": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "MemberOut": {
+        "required": [
+          "member_id",
+          "name",
+          "tier",
+          "outstanding_fees_cents"
+        ],
+        "type": "object",
+        "properties": {
+          "member_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string"
+          },
+          "outstanding_fees_cents": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "RegisterBook": {
+        "required": [
+          "isbn",
+          "title",
+          "author"
+        ],
+        "type": "object",
+        "properties": {
+          "isbn": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
+        }
+      },
+      "RegisterMember": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "tier": {
+            "type": "string",
+            "default": "standard"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "catalog"
+    },
+    {
+      "name": "lending"
+    }
+  ]
+}
