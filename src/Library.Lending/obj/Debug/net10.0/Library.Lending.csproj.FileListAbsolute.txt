@@ -1,0 +1,15 @@
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/bin/Debug/net10.0/Library.Lending.deps.json
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/bin/Debug/net10.0/Library.Lending.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/bin/Debug/net10.0/Library.Lending.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/bin/Debug/net10.0/Library.Contracts.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/bin/Debug/net10.0/Library.Contracts.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.csproj.AssemblyReference.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.AssemblyInfoInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.AssemblyInfo.cs
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.csproj.CoreCompileInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library..C230C0E6.Up2Date
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/refint/Library.Lending.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/Library.Lending.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/obj/Debug/net10.0/ref/Library.Lending.dll

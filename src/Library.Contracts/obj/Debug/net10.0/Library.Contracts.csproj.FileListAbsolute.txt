@@ -1,0 +1,11 @@
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.AssemblyInfoInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.AssemblyInfo.cs
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.csproj.CoreCompileInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/bin/Debug/net10.0/Library.Contracts.deps.json
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/bin/Debug/net10.0/Library.Contracts.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/bin/Debug/net10.0/Library.Contracts.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/refint/Library.Contracts.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/Library.Contracts.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Contracts/obj/Debug/net10.0/ref/Library.Contracts.dll

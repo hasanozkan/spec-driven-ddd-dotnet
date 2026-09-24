@@ -1,0 +1,6 @@
+{
+  "Library.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/hasanozkan\/Projects\/hasanozkan\/spec-driven-ddd-dotnet\/src\/Library.Api",
+  "Library.Catalog, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/hasanozkan\/Projects\/hasanozkan\/spec-driven-ddd-dotnet\/src\/Library.Catalog",
+  "Library.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/hasanozkan\/Projects\/hasanozkan\/spec-driven-ddd-dotnet\/src\/Library.Contracts",
+  "Library.Lending, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/hasanozkan\/Projects\/hasanozkan\/spec-driven-ddd-dotnet\/src\/Library.Lending"
+}

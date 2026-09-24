@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Sw3qtOVaMtc=",
+  "success": true,
+  "projectFilePath": "/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Lending/Library.Lending.csproj",
+  "expectedPackageFiles": [
+    "/Users/hasanozkan/.nuget/packages/yamldotnet/18.1.0/yamldotnet.18.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

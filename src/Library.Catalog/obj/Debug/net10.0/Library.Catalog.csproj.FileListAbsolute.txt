@@ -1,0 +1,15 @@
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/bin/Debug/net10.0/Library.Catalog.deps.json
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/bin/Debug/net10.0/Library.Catalog.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/bin/Debug/net10.0/Library.Catalog.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/bin/Debug/net10.0/Library.Contracts.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/bin/Debug/net10.0/Library.Contracts.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.csproj.AssemblyReference.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.AssemblyInfoInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.AssemblyInfo.cs
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.csproj.CoreCompileInputs.cache
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library..5C293686.Up2Date
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/refint/Library.Catalog.dll
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/Library.Catalog.pdb
+/Users/hasanozkan/Projects/hasanozkan/spec-driven-ddd-dotnet/src/Library.Catalog/obj/Debug/net10.0/ref/Library.Catalog.dll
