@@ -5,7 +5,15 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace Library.Tests;
 
+/// <summary>
+/// System.Diagnostics.Metrics listeners are process-wide: a meter named "Library"
+/// in another test's host would be counted here too. So these tests run alone.
+/// </summary>
+[CollectionDefinition("metrics", DisableParallelization = true)]
+public sealed class RunsAloneForMetrics;
+
 /// <summary>Feature 004: the same specs/telemetry.yaml the Python implementation is held to.</summary>
+[Collection("metrics")]
 public partial class OperabilityTests
 {
     // Label values can contain braces (http_route="/catalog/books/{isbn}/copies"): skip quoted text.
