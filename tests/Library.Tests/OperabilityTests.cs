@@ -61,6 +61,7 @@ public partial class OperabilityTests
         public string Type { get; set; } = "";
         public string? Unit { get; set; }
         public List<string> Attributes { get; set; } = [];
+        public List<double>? Buckets { get; set; }
     }
 
     [Fact, Trait("Rule", "OPS-R4")]
@@ -81,6 +82,13 @@ public partial class OperabilityTests
             var seen = family.SelectMany(p => p.Labels.Keys).ToHashSet();
             foreach (var attribute in m.Attributes)
                 Assert.Contains(attribute.Replace('.', '_'), seen);
+            if (m.Buckets is { } buckets)
+            {
+                var le = family.Where(p => p.Name.EndsWith("_bucket", StringComparison.Ordinal) && p.Labels["le"] != "+Inf")
+                    .Select(p => double.Parse(p.Labels["le"], System.Globalization.CultureInfo.InvariantCulture))
+                    .Distinct().Order().ToList();
+                Assert.Equal(buckets, le);
+            }
         }
     }
 
