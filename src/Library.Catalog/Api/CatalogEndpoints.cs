@@ -12,6 +12,8 @@ public sealed record BookOut(string Isbn, string Title, string Author);
 
 public sealed record CopyOut(string CopyId, string Isbn);
 
+public sealed record CopyStatusOut(string CopyId, bool OnLoan);
+
 public sealed record AvailabilityOut(string Isbn, string Title, string Author, int CopiesTotal, int CopiesAvailable);
 
 public static class CatalogEndpoints
@@ -35,6 +37,9 @@ public static class CatalogEndpoints
             var c = service.AddCopy(isbn);
             return TypedResults.Created($"/catalog/copies/{c.CopyId}", new CopyOut(c.CopyId, c.Isbn));
         });
+
+        catalog.MapGet("/books/{isbn}/copies", (string isbn, CatalogService service) =>
+            TypedResults.Ok(service.Copies(isbn).Select(c => new CopyStatusOut(c.CopyId, c.OnLoan)).ToList()));
 
         catalog.MapGet("/search", (string q, CatalogService service) =>
             TypedResults.Ok(service.Search(q)

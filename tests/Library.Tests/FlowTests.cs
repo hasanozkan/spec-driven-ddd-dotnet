@@ -99,4 +99,20 @@ public class FlowTests
         Assert.Equal(HttpStatusCode.NotFound, r.StatusCode);
         Assert.Equal("book_not_found", (await r.Json())["code"]!.GetValue<string>());
     }
+
+    [Fact, Trait("Rule", "CAT-R3")]
+    public async Task Copies_are_listed_with_their_loan_state()
+    {
+        using var app = new LibraryApp();
+        var c = app.CreateClient();
+        var first = await c.CopyOf();
+        var second = (await (await c.PostAsync("/catalog/books/9780321125217/copies", null)).Json())["copy_id"]!.GetValue<string>();
+        await c.Borrow(await c.Member(), first);
+        var listed = (await (await c.GetAsync("/catalog/books/9780321125217/copies")).Json()).AsArray()
+            .ToDictionary(x => x!["copy_id"]!.GetValue<string>(), x => x!["on_loan"]!.GetValue<bool>());
+        Assert.Equal(new Dictionary<string, bool> { [first] = true, [second] = false }, listed);
+        var missing = await c.GetAsync("/catalog/books/9999999999/copies");
+        Assert.Equal(HttpStatusCode.NotFound, missing.StatusCode);
+        Assert.Equal("book_not_found", (await missing.Json())["code"]!.GetValue<string>());
+    }
 }

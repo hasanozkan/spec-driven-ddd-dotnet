@@ -40,6 +40,10 @@ public sealed class CatalogService
         return copy;
     }
 
+    /// <summary>CAT-R3.</summary>
+    public IReadOnlyList<Copy> Copies(string isbn) =>
+        _repo.GetBook(isbn) is null ? throw new BookNotFound(isbn) : _repo.CopiesOf(isbn);
+
     public IReadOnlyList<Availability> Search(string text) =>
         [.. _repo.Books()
             .Where(b => b.Title.Contains(text, StringComparison.OrdinalIgnoreCase)
